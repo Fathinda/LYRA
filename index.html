@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LYRA ✦ Sains Data ITSB — Axis 2026</title>
+  <meta name="description" content="Website Resmi Kelompok Lyra — Orientasi Jurusan (Osjur) Sains Data ITSB Axis 2026. Kenalan dengan 1 Dislok, 9 Squad Members, dan Mainkan Demo Game Canva AI!">
+  
+  <!-- Favicon (SVG constellation star) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%23022c22'/><polygon points='16,4 20,12 28,16 20,20 16,28 12,20 4,16 12,12' fill='%2334d399'/><circle cx='16' cy='16' r='4' fill='%23fef08a'/></svg>">
+
+  <!-- Google Fonts: Space Grotesk & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Floating Audio & Sparkle Canvas Elements -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Sticky Glassmorphic Navbar -->
+  <header class="navbar-wrapper">
+    <nav class="navbar container" aria-label="Navigasi Utama">
+      <a href="#hero" class="brand-logo" aria-label="Kelompok Lyra Beranda">
+        <span class="logo-sparkle">✦</span>
+        <span class="logo-text">LYRA</span>
+        <span class="logo-badge">AXIS '26</span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <ul class="nav-links">
+        <li><a href="#dislok" class="nav-item">Dislok</a></li>
+        <li><a href="#members" class="nav-item">9 Squad</a></li>
+        <li><a href="#game" class="nav-item">Demo Game</a></li>
+        <li><a href="#lore" class="nav-item">Filosofi</a></li>
+      </ul>
+
+      <!-- Action buttons -->
+      <div class="nav-actions">
+        <!-- Audio Synth Toggle (Non-intrusive sound effects) -->
+        <button id="sound-toggle" class="icon-btn" title="Toggle Sound Effect (Efek Suara Arcade)" aria-label="Nyalakan / Matikan Efek Suara">
+          <span class="sound-icon">🔊</span>
+        </button>
+
+        <!-- CTA Pill Button (Opens in New Tab) -->
+        <a id="nav-game-btn" href="https://dolphin-zpkhz7.my.canva.site/errer" target="_blank" rel="noopener noreferrer" class="btn btn-pill-nav">
+          <span>Play Game</span>
+          <span class="ext-arrow">↗</span>
+        </a>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button id="mobile-toggle" class="hamburger-btn" aria-label="Buka Menu Navigasi" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Drawer Navigation -->
+    <div id="mobile-drawer" class="mobile-drawer" aria-hidden="true">
+      <ul class="mobile-nav-links">
+        <li><a href="#hero" class="mobile-nav-item">Beranda</a></li>
+        <li><a href="#dislok" class="mobile-nav-item">Dislok Pembimbing</a></li>
+        <li><a href="#members" class="mobile-nav-item">9 Squad Members</a></li>
+        <li><a href="#game" class="mobile-nav-item">Demo Game (Canva AI)</a></li>
+        <li><a href="#lore" class="mobile-nav-item">Filosofi Rasi Lyra</a></li>
+      </ul>
+      <div class="mobile-cta-wrap">
+        <a id="mobile-game-btn" href="https://dolphin-zpkhz7.my.canva.site/errer" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block">
+          <span>Mainkan Demo Game ↗</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <!-- Interactive Constellation Canvas -->
+      <canvas id="constellation-canvas" aria-hidden="true"></canvas>
+
+      <div class="container hero-container">
+        <div class="hero-grid">
+          
+          <!-- Hero Text & CTA Column -->
+          <div class="hero-text-col">
+            <!-- Orientation Badge -->
+            <div class="hero-badge animate-fade-down">
+              <span class="badge-sparkle">✦</span>
+              <span class="badge-text">SAINS DATA ITSB • AXIS 2026</span>
+              <span class="badge-sparkle">✦</span>
+            </div>
+
+            <!-- Main Title -->
+            <h1 class="hero-title animate-fade-up">
+              Menembus Dimensi Data Bersama <span class="text-highlight">Kelompok LYRA</span>
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="hero-subtitle animate-fade-up delay-1">
+              Gugusan bintang tercerah di langit orientasi jurusan Sains Data ITSB. Berisikan <span class="text-mint font-semibold">1 Dislok Teladan</span> &amp; <span class="text-mint font-semibold">9 Explorer Tangguh</span> yang siap memecahkan kode, menaklukkan algoritma, dan mengukir tawa sepanjang Axis 2026!
+            </p>
+
+            <!-- CTAs -->
+            <div class="hero-ctas animate-fade-up delay-2">
+              <a id="hero-game-btn" href="https://dolphin-zpkhz7.my.canva.site/errer" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-glow">
+                <span>Mainkan Demo Game</span>
+                <span class="ext-arrow">↗</span>
+              </a>
+              <a href="#members" class="btn btn-secondary">
+                <span>Kenalan Sama Squad</span>
+              </a>
+            </div>
+
+            <!-- Highlights & Stats Strip -->
+            <div class="hero-stats animate-fade-up delay-3">
+              <div class="stat-pill">
+                <span class="stat-number">1</span>
+                <span class="stat-label">Dislok Pembimbing</span>
+              </div>
+              <div class="stat-divider">✦</div>
+              <div class="stat-pill">
+                <span class="stat-number">9</span>
+                <span class="stat-label">Squad Members</span>
+              </div>
+              <div class="stat-divider">✦</div>
+              <div class="stat-pill">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Solid &amp; Fun Vibe</span>
+              </div>
+              <div class="stat-divider">✦</div>
+              <div class="stat-pill">
+                <span class="stat-number">#1</span>
+                <span class="stat-label">Vega Spirit</span>
+              </div>
+            </div>
+
+            <!-- Interactive Constellation Hint -->
+            <div class="hero-mouse-hint">
+              <span class="hint-text">Gerakkan kursor atau sentuh layar untuk menarik gravitasi rasi bintang Lyra</span>
+            </div>
+          </div>
+
+          <!-- Hero Group Photo Column (Foto Bareng Sekelompok) -->
+          <div class="hero-photo-col">
+            <div class="hero-photo-frame-wrapper">
+              <div class="hero-photo-frame glass-panel" id="hero-photo-card">
+                <div class="photo-ambient-glow"></div>
+                <span class="photo-corner-decor tl">✦</span>
+                <span class="photo-corner-decor tr">✦</span>
+                <span class="photo-corner-decor bl">✦</span>
+                <span class="photo-corner-decor br">✦</span>
+                
+                <div class="hero-img-container">
+                  <img src="assets/fotbar.jpeg" alt="Foto Bersama Kelompok Lyra Sains Data ITSB Axis 2026" class="hero-fotbar-img" id="hero-fotbar-img" onerror="this.onerror=null; this.src='assets/fotbar.jpg';">
+                  <div class="hero-photo-overlay"></div>
+                </div>
+
+                <div class="hero-photo-caption">
+                  <div class="caption-badge">
+                    <span class="caption-text">KELOMPOK LYRA ✦ AXIS 2026</span>
+                  </div>
+                  <p class="caption-quote">"1 Dislok, 9 Explorer Data, Solidaritas Tanpa Batas!"</p>
+                </div>
+              </div>
+
+              <!-- Floating decorative badge -->
+              <div class="floating-hero-pill">
+                <span class="pill-text">Official Squad Portrait</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Constellation Lore & Philosophy Section -->
+    <section id="lore" class="lore-section">
+      <div class="container">
+        <div class="lore-card glass-panel">
+          <div class="lore-constellation-svg">
+            <svg viewBox="0 0 200 160" class="svg-lyra" aria-label="Peta Rasi Bintang Lyra">
+              <!-- Constellation Lines -->
+              <line x1="100" y1="20" x2="145" y2="55" class="const-line" />
+              <line x1="100" y1="20" x2="55" y2="55" class="const-line" />
+              <line x1="55" y1="55" x2="145" y2="55" class="const-line" />
+              <line x1="55" y1="55" x2="70" y2="125" class="const-line" />
+              <line x1="145" y1="55" x2="130" y2="125" class="const-line" />
+              <line x1="70" y1="125" x2="130" y2="125" class="const-line" />
+              <!-- Stars -->
+              <!-- Vega (Alpha Lyrae) -->
+              <circle cx="100" cy="20" r="7" class="star-vega" />
+              <circle cx="100" cy="20" r="14" class="star-glow" />
+              <!-- Other Stars -->
+              <circle cx="55" cy="55" r="4" class="star-node" />
+              <circle cx="145" cy="55" r="4" class="star-node" />
+              <circle cx="70" cy="125" r="4.5" class="star-node" />
+              <circle cx="130" cy="125" r="4.5" class="star-node" />
+              <text x="115" y="24" class="star-label">VEGA ★</text>
+            </svg>
+          </div>
+          <div class="lore-content">
+            <span class="section-tag">FILOSOFI KELOMPOK</span>
+            <h2 class="lore-title">Mengapa Kami Dinamai <span class="text-gold">"LYRA"</span>?</h2>
+            <p>
+              Dalam mitologi langit malam, <strong>Lyra</strong> adalah rasi bintang berlambang kecapi emas yang menampung <strong>Vega</strong> — salah satu bintang paling terang di angkasa. Bagi kami mahasiswa Sains Data ITSB 2026, Lyra melambangkan <em>harmoni antara seni logika, presisi data, dan kehangatan kebersamaan</em>.
+            </p>
+            <div class="lore-badges">
+              <span class="lore-pill">Harmoni &amp; Sinergi</span>
+              <span class="lore-pill">Visi Terang (Vega Mindset)</span>
+              <span class="lore-pill">Data-Driven Compassion</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dislok Spotlight Section -->
+    <section id="dislok" class="dislok-section">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header text-center">
+          <span class="section-tag">THE GUIDING STAR</span>
+          <h2 class="section-title">Spotlight Dislok Pembimbing</h2>
+          <p class="section-desc">Sosok mentor berdedikasi yang membimbing Kelompok Lyra menembus rintangan osjur dengan tenang, cerdas, dan penuh inspirasi.</p>
+        </div>
+
+        <!-- Dislok Card Container (Dynamically enriched by script.js) -->
+        <div class="dislok-card-wrapper">
+          <div id="dislok-card" class="dislok-card glass-panel">
+            <div class="dislok-grid">
+              <div class="dislok-avatar-col">
+                <div class="dislok-photo-frame">
+                  <img id="dislok-photo" src="assets/dislok.jpg" alt="Foto Dislok Lyra" class="dislok-img" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'400\' viewBox=\'0 0 400 400\'><rect width=\'400\' height=\'400\' fill=\'%23064e3b\'/><circle cx=\'200\' cy=\'170\' r=\'65\' fill=\'%2334d399\'/><circle cx=\'200\' cy=\'330\' r=\'110\' fill=\'%2310b981\'/><text x=\'200\' y=\'80\' font-family=\'sans-serif\' font-size=\'32\' fill=\'%23fef08a\' text-anchor=\'middle\'>DISLOK LYRA</text></svg>';">
+                  <div class="photo-glow-ring"></div>
+                  <div class="dislok-crown-badge">
+                    <span>✦</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dislok-info-col">
+                <div class="dislok-badges-row">
+                  <span id="dislok-badge" class="badge-tag badge-gold">DISLOK LYRA ✦ AXIS 2026</span>
+                  <span id="dislok-zodiac" class="badge-tag badge-forest">Leo • Alpha Lyrae</span>
+                </div>
+
+                <h3 id="dislok-name" class="dislok-name">Kak Bintang Mahardika</h3>
+                <p id="dislok-role" class="dislok-role">The Cosmic Navigator &amp; Chief Mentor</p>
+
+                <p id="dislok-bio" class="dislok-bio">
+                  Pemandu arah Kelompok Lyra yang selalu sigap mengayomi, anti panik, dan ahli meredakan tensi osjur dengan jokes bapak-bapak ber-IPK 4.0.
+                </p>
+
+                <blockquote id="dislok-quote" class="dislok-quote">
+                  "Jalani osjur dengan senyuman, error di-debug pelan-pelan. Yang penting esensi dapet, chemistry jalan!"
+                </blockquote>
+
+                <!-- Traits -->
+                <div id="dislok-traits" class="dislok-traits">
+                  <span class="trait-chip">Ngopi Pas Deadline</span>
+                  <span class="trait-chip">Anti Panik Mode</span>
+                  <span class="trait-chip">Data Mining</span>
+                  <span class="trait-chip">Curhat Room 24/7</span>
+                </div>
+
+                <!-- Interactive Sparkle / Cheer Button -->
+                <div class="dislok-action-row">
+                  <button id="cheer-dislok-btn" class="btn btn-gold btn-sparkle" aria-label="Kasih apresiasi kepada Dislok">
+                    <span class="btn-label">Kasih Apresiasi Dislok</span>
+                    <span class="sparkle-counter" id="sparkle-counter">128</span>
+                  </button>
+                  <span class="cheer-hint">Klik berkali-kali untuk pesta starlight!</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Squad Grid Section (9 Members) -->
+    <section id="members" class="members-section">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header text-center">
+          <span class="section-tag">MEET THE SQUAD</span>
+          <h2 class="section-title">9 Bintang Kelompok Lyra</h2>
+          <p class="section-desc">Sembilan talenta unik Sains Data ITSB Axis 2026 dengan keahlian, zodiac vibe, dan fakta unik yang bikin squad ini selalu hidup!</p>
+        </div>
+
+        <!-- Squad Control Toolbar (Randomizer & Filter) -->
+        <div class="squad-toolbar">
+          <div class="toolbar-left">
+            <button id="randomizer-btn" class="btn btn-secondary btn-randomizer" title="Pilih acak satu anggota untuk spotlight">
+              <span class="btn-text">Pick Random Member</span>
+            </button>
+          </div>
+
+          <!-- Category filter buttons -->
+          <div class="toolbar-right">
+            <div class="filter-pills" role="tablist">
+              <button class="filter-btn active" data-filter="all">Semua (9)</button>
+              <button class="filter-btn" data-filter="tech">Tech &amp; Code</button>
+              <button class="filter-btn" data-filter="strategy">Strategi</button>
+              <button class="filter-btn" data-filter="vibe">Vibe Maker</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Result announcement for randomizer -->
+        <div id="randomizer-banner" class="randomizer-banner hidden" aria-live="polite">
+          <span id="randomizer-text">Anggota Terpilih: <strong>...</strong></span>
+        </div>
+
+        <!-- 3x3 Responsive Members Grid -->
+        <div id="members-grid" class="members-grid">
+          <!-- Dynamically populated by script.js from membersData array -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Game Showcase Section (Canva AI Demo) -->
+    <section id="game" class="game-section">
+      <div class="container">
+        <!-- Arcade Style Wrapper -->
+        <div class="arcade-card">
+          <!-- Arcade Header Frame -->
+          <div class="arcade-top-bar">
+            <div class="arcade-lights">
+              <span class="light red"></span>
+              <span class="light yellow"></span>
+              <span class="light green"></span>
+            </div>
+            <div class="arcade-badge">CANVA AI INTERACTIVE MINI-GAME</div>
+            <div class="arcade-coin-slot">INSERT COIN ✦ 2026</div>
+          </div>
+
+          <div class="arcade-body">
+            <div class="arcade-content-col">
+              <span class="arcade-tag">OFFICIAL GROUP PROJECT</span>
+              <h2 class="arcade-title">Cosmic Lyra: Data Odyssey</h2>
+              <p class="arcade-desc">
+                Sebuah mini-game petualangan data interaktif karya Kelompok Lyra yang dirancang menggunakan keajaiban <strong>Canva AI</strong>! Uji ketangkasan logika, kenali pola data tersembunyi, dan selamatkan rasi bintang dari anomali data liar!
+              </p>
+
+              <!-- How to Play Steps -->
+              <div class="game-instructions">
+                <h4 class="instructions-heading">Cara Main Cepat:</h4>
+                <div class="steps-grid">
+                  <div class="step-card">
+                    <span class="step-num">1</span>
+                    <div class="step-info">
+                      <strong>Pilih Explorer</strong>
+                      <p>Gunakan avatar dari 9 anggota Lyra sebagai heromu.</p>
+                    </div>
+                  </div>
+                  <div class="step-card">
+                    <span class="step-num">2</span>
+                    <div class="step-info">
+                      <strong>Pecahkan Tantangan</strong>
+                      <p>Jawab teka-teki logika Sains Data &amp; kuis osjur seru.</p>
+                    </div>
+                  </div>
+                  <div class="step-card">
+                    <span class="step-num">3</span>
+                    <div class="step-info">
+                      <strong>Raih Vega Trophy</strong>
+                      <p>Capai skor tertinggi dan bawa Lyra ke puncak galaksi!</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Animated Launch Button (Opens in New Tab) -->
+              <div class="game-cta-wrapper">
+                <a id="canva-game-btn" href="https://dolphin-zpkhz7.my.canva.site/errer" target="_blank" rel="noopener noreferrer" class="btn btn-arcade btn-pulse">
+                  <span class="arcade-btn-text">Masuk ke Demo Game (Canva AI)</span>
+                  <span class="external-arrow">↗</span>
+                </a>
+                <p class="cta-subtext">✦ Game akan terbuka di tab baru Canva AI • Gratis &amp; langsung main!</p>
+              </div>
+            </div>
+
+            <!-- Arcade Game Preview Visual -->
+            <div class="arcade-preview-col">
+              <div class="arcade-screen-mockup">
+                <div class="screen-glare"></div>
+                <div class="scanlines"></div>
+                <img src="assets/game-preview.png" alt="Preview Game Canva AI Kelompok Lyra" class="game-preview-img" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'350\' viewBox=\'0 0 600 350\'><rect width=\'600\' height=\'350\' fill=\'%23064e3b\'/><text x=\'300\' y=\'150\' font-family=\'sans-serif\' font-size=\'44\' fill=\'%23fef08a\' text-anchor=\'middle\'>COSMIC LYRA</text><text x=\'300\' y=\'210\' font-family=\'sans-serif\' font-size=\'22\' fill=\'%2334d399\' text-anchor=\'middle\'>CANVA AI MINI-GAME</text></svg>';">
+                
+                <a id="screen-play-overlay" href="https://dolphin-zpkhz7.my.canva.site/errer" target="_blank" rel="noopener noreferrer" class="screen-play-btn" aria-label="Mulai game di tab baru">
+                  <span class="play-triangle">▶</span>
+                  <span class="play-caption">KLIK UNTUK MAIN</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Arcade Bottom Bar with Decorative Buttons -->
+          <div class="arcade-footer-bar">
+            <div class="retro-dpad">
+              <span class="dpad-center">✦</span>
+            </div>
+            <div class="retro-marquee">KELOMPOK LYRA ✦ SAINS DATA ITSB ✦ AXIS 2026 ✦ READY PLAYER ONE</div>
+            <div class="retro-buttons">
+              <span class="btn-circle red">A</span>
+              <span class="btn-circle blue">B</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Interactive Detail Modal for Member Card -->
+  <div id="member-modal" class="modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-dialog glass-panel animate-scale-up">
+      <button id="modal-close-btn" class="modal-close" aria-label="Tutup jendela rincian anggota">✕</button>
+      <div id="modal-content" class="modal-content-body">
+        <!-- Dynamically injected by script.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="footer-logo">✦ LYRA</span>
+          <p class="footer-tagline">Kelompok Osjur Sains Data • Institut Teknologi Sains Bandung (ITSB) • Axis 2026</p>
+        </div>
+        <div class="footer-links">
+          <a href="#hero">Beranda</a>
+          <a href="#dislok">Dislok</a>
+          <a href="#members">9 Squad</a>
+          <a href="#game">Demo Game</a>
+          <a href="#lore">Filosofi</a>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <p class="copyright">
+          Made with 💚 by <strong>Kelompok Lyra</strong> — Sains Data ITSB Axis 2026.
+        </p>
+        <p class="starlight-quote">
+          "Tetap bersinar seperti Vega di langit malam, tak pernah luntur oleh kegelapan."
+        </p>
+      </div>
+    </div>
+
+    <!-- Floating Back to Top Button (Clean upward arrow) -->
+    <button id="back-to-top" class="back-to-top-btn" title="Kembali ke atas" aria-label="Kembali ke atas">
+      <span class="top-arrow">↑</span>
+    </button>
+  </footer>
+
+  <!-- Main JavaScript Logic & Configuration -->
+  <script src="script.js"></script>
+</body>
+</html>
